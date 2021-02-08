@@ -1,0 +1,41 @@
+//variable
+@import 'variables';
+@import 'mixins';
+
+//reset, normalize
+@import 'vendors/normalize';
+@import 'vendors/global';
+
+.container {
+  margin: auto;
+  width: 900px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+
+  .img {
+    width: 100%;
+    height: 100%;
+    background-color: lightpink;
+    cursor: pointer;
+    transform-style: preserve-3d;
+  }
+}
+
+.button__box {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  justify-content: center;
+  .starter {
+    width: 100px;
+    height: 50px;
+  }
+}
+
+.rotate {
+  transform: rotateY(180deg);
+  transition: transform 0.3s;
+}
